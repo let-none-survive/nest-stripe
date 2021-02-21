@@ -1,7 +1,7 @@
 
 ## Description
 
-API for [link]
+API for [React + TypeScript + Webpack - Stripe integration](https://github.com/let-none-survive/react-typescript-stripe)
 
 ## Installation
 
