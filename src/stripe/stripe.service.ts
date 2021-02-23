@@ -36,7 +36,7 @@ export class StripeService {
     });
 
     await this.ordersRepository.save(order);
-
+    console.log(order)
     return {
       clientSecret: paymentIntent.client_secret,
     };

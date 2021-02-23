@@ -7,12 +7,12 @@ import { Orders } from '../stripe/orders.entity';
   imports: [
     TypeOrmModule.forRoot({
       type: 'postgres',
-      host: 'localhost',
-      port: 5432,
-      username: 'user',
-      password: 'password',
+      host: process.env.DB_HOST,
+      port: +process.env.DB_PORT,
+      username: process.env.DB_USERNAME,
+      password: process.env.DB_PASSWORD,
       entities: [Product, Orders],
-      database: 'database',
+      database: process.env.DB_DATABASE,
       synchronize: true,
     }),
   ],

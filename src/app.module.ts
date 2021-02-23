@@ -3,6 +3,7 @@ import { DatabaseModule } from './database/database.module';
 import { ProductsModule } from './products/products.module';
 import { StripeModule } from './stripe/stripe.module';
 import { ConfigModule } from '@nestjs/config';
+import configuration from '../config/configuration'
 
 @Module({
   imports: [
@@ -10,7 +11,7 @@ import { ConfigModule } from '@nestjs/config';
     ProductsModule,
     StripeModule,
     ConfigModule.forRoot({
-      envFilePath: '.env',
+      load:[configuration],
       isGlobal: true,
     }),
   ],
